@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
       <Chakra>
+        <Header />
         <Layout>
           <Component {...pageProps} />
         </Layout>

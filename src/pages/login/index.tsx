@@ -1,12 +1,25 @@
 import Head from 'next/head'
-import { Text, Box } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Checkbox,
+  Container,
+  Divider,
+  FormControl,
+  FormLabel,
+  Heading,
+  HStack,
+  Input,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 import { GetServerSideProps } from 'next';
-import { parseCookies } from 'nookies';
-
+import { parseCookies, setCookie } from 'nookies';
+import { PasswordField } from '@/component/PassworldField';
+import NextLink from 'next/link'
 
 export default function Login() {
   const bgImg = `linear-gradient(to bottom, rgb(0 0 0),#0a0a0a6e,rgb(0 0 0)), url("https://raw.githubusercontent.com/FelipePDS/otakinho-store/master/assets/images/bgBoku.jpg") top left / cover`
-
   return (
     <>
       <Head>
@@ -15,14 +28,68 @@ export default function Login() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Text>Login</Text>
+      <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
+        <Stack spacing="8">
+          <Stack spacing="6">
+            {/* <Logo /> */}
+            <Stack spacing={{ base: '2', md: '3' }} textAlign="center">
+              <Heading size={{ base: 'xs', md: 'sm' }}>
+                Faça login na sua conta
+              </Heading>
+            </Stack>
+          </Stack>
+          <Box
+            py={{ base: '0', sm: '8' }}
+            px={{ base: '4', sm: '10' }}
+            // bg={{ base: 'transparent', sm: 'bg-surface' }}
+            boxShadow={{ base: 'none', sm: 'md' }}
+            borderRadius={{ base: 'none', sm: 'xl' }}
+            bg='black.300'
+          >
+            <Stack spacing="6">
+              <Stack spacing="5">
+                <FormControl>
+                  <FormLabel htmlFor="email">Email</FormLabel>
+                  <Input id="email" type="email" />
+                </FormControl>
+                <PasswordField />
+              </Stack>
+              <HStack justify="space-between">
+                <Checkbox defaultChecked>Remember me</Checkbox>
+                <Button variant="link" colorScheme="blue" size="sm">
+                  Forgot password?
+                </Button>
+              </HStack>
+              <Stack spacing="6">
+                <Button variant="primary" bg={'blue.600'}>Sign in</Button>
+                <HStack spacing="1" justify="center">
+                  <Text color="muted">Não tem uma conta?</Text>
+                  <NextLink href='/signup'>
+                    <Button variant="link" colorScheme="blue">
+                      registrar
+                    </Button>
+                  </NextLink>
+                </HStack>
+              </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Container>
+      <LoginForm />
+    </>
+  )
+}
+
+const LoginForm = () => {
+  return (
+    <>
     </>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const cookies = parseCookies(ctx);
-  if (cookies['backend.token']) {
+  if (cookies['backendtoken']) {
     return {
       redirect: {
         destination: '/',
