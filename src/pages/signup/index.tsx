@@ -75,7 +75,7 @@ export default function Signup() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxW="120hc"
-        // py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}
+      // py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}
       >
         <Stack spacing="8">
           <Stack spacing="6">
@@ -86,14 +86,12 @@ export default function Signup() {
             </Stack>
           </Stack>
           <Box
-
             py={{ base: '0', sm: '8' }}
             px={{ base: '4', sm: '10' }}
             // bg={{ base: 'transparent', sm: 'bg-surface' }}
             boxShadow={{ base: 'none', sm: 'md' }}
             borderRadius={{ base: 'none', sm: 'xl' }}
             bg='black.300'
-
           >
             <chakra.form as={'form'} onSubmit={handleSubmit(onSubmitHandler)}>
               <Stack spacing="6">
@@ -181,7 +179,6 @@ export default function Signup() {
                 </Stack>
               </Stack>
             </chakra.form>
-
           </Box>
         </Stack>
       </Container>
