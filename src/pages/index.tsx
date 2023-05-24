@@ -1,4 +1,6 @@
 import CardGrid from '@/component/CardGrid';
+import { Footer } from '@/component/Footer';
+import { Ticker } from '@/component/Marquee';
 import {
   Container,
   Stack,
@@ -106,8 +108,9 @@ export default function HomeHero() {
           </Flex>
         </Stack>
       </Container>
+      <Ticker/>
       <CardGrid />
-      lklsklwklws
+      <Footer />
     </>
   );
 }

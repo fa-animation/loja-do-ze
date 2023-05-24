@@ -1,34 +1,8 @@
 import React from 'react';
-import { FiHelpCircle } from 'react-icons/fi';
-import { GrUpdate } from 'react-icons/gr';
-import { AiFillSafetyCertificate } from 'react-icons/ai';
 import {
   Container, chakra, Grid, Box, Flex, Heading, Text, Center
 } from '@chakra-ui/react';
-
-interface InfoCardType {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-}
-
-const infoCard: InfoCardType[] = [
-  {
-    icon: <FiHelpCircle />,
-    title: 'Qualidade na entrega',
-    description: 'Contamos com atendimento ao usuário de sábado ao domingo das 7:00 às 21:00; também temos o suporte de terça à quinta...',
-  },
-  {
-    icon: <AiFillSafetyCertificate />,
-    title: 'Segurança',
-    description: 'Tenha as melhores práticas de segurança e com visibilidade e monitoria de todas as operações..',
-  },
-  {
-    icon: <GrUpdate />,
-    title: 'Atualização dos conteúdos',
-    description: 'Estaremos atualizando novos conteúdo e um catálogo completo, atualizado com as principais novidades..',
-  },
-];
+import { InfoCardType, infoCard } from '@/utils';
 
 export default function CardGrid() {
   return (
