@@ -29,29 +29,26 @@ export default function HomeHero() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid gap="6" templateRows="auto 1fr auto" templateColumns="100%" height="100vh">
-        <Box position="relative">
-        <Image src={"htpps://github.com/kayoronald.png"} alt="Hero background image"  width={100} height={100}/>
-          <Box px={layoutDimensions.px}>
-            <Center>
-              <VStack spacing={[6, null, 8]} textAlign="center" py={["20%", null, null, "10%"]}>
-                <Heading as="h1" size={["2xl", null, null, "3xl"]} maxWidth="4xl" lineHeight="shorter">
-                  Loja do zé
-                </Heading>
-                <Text fontSize={["lg", null, null, "xl"]} maxWidth="2xl" variant="light" lineHeight="base">
-                  Onde você encontra de tudo!
-                </Text>
-                <Button  size='lg'>
-                  Comece a comprar
-                </Button>
-              </VStack>
-            </Center>
-          </Box>
+      <Box position="relative">
+        <Box px={layoutDimensions.px}>
+          <Center>
+            <VStack spacing={[6, null, 8]} textAlign="center" py={["20%", null, null, "10%"]}>
+              <Heading as="h1" size={["2xl", null, null, "3xl"]} maxWidth="4xl" lineHeight="shorter">
+                Loja do zé
+              </Heading>
+              <Text fontSize={["lg", null, null, "xl"]} maxWidth="2xl" variant="light" lineHeight="base">
+                Onde você encontra de tudo!
+              </Text>
+              <Button size='lg'>
+                Comece a comprar
+              </Button>
+            </VStack>
+          </Center>
         </Box>
-      </Grid>
+      </Box>
       <Ticker />
       <CardGrid />
-      <AppStores/>
+      <AppStores />
       <Accordion />
       <Footer />
     </>
