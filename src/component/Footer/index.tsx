@@ -1,6 +1,5 @@
 import { layoutDimensions } from "@/utils/dimensions";
 import { Box, Flex, FlexProps, Link, Text } from "@chakra-ui/react";
-// import NextLink from "next/link";
 const currentYear = new Date().getFullYear();
 
 export const Footer = (props: FlexProps) => {
@@ -13,7 +12,7 @@ export const Footer = (props: FlexProps) => {
           </Text>
           <Text fontSize="sm" textAlign="right">
             KayoRonald{" "}
-            <Link variant="colored" href="/" isExternal>
+            <Link variant="colored" href="https://github.com/KayoRonald/" isExternal>
               view source
             </Link>
           </Text>
