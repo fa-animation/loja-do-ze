@@ -29,12 +29,14 @@ const faqDate = [
 ]
 
 const Accordion: NextPage<AccordionProps> = () => {
+  const bgColor = useColorModeValue('gray.30', 'gray.700')
+  const textColor = useColorModeValue('#18216d', 'white')
   return (
     <Container maxWidth="74ch" mb="22px" mt={6}>
       <Center marginBottom={5}>
         <Heading as="h2">Perguntas frequentes</Heading>
       </Center>
-      <ChakraAccordion allowMultiple bg={useColorModeValue('gray.30', 'gray.700')}>
+      <ChakraAccordion allowMultiple bg={bgColor}>
         {faqDate.map((faq) => (
           <AccordionItem key={faq.id} borderTopWidth={0} borderBottomWidth={0} marginBottom="3px">
             <h2>
@@ -60,7 +62,7 @@ const Accordion: NextPage<AccordionProps> = () => {
             <AccordionPanel pb={4}>
               <Text
                 fontSize="md"
-                color={useColorModeValue('#18216d', 'white')}
+                color={textColor}
               >
                 {faq.body}
               </Text>
