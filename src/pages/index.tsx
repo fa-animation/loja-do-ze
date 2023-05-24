@@ -1,24 +1,18 @@
-import Accordion from '@/component/Accordion';
-import CardGrid from '@/component/CardGrid';
-import { Footer } from '@/component/Footer';
-import { Ticker } from '@/component/Marquee';
-import { layoutDimensions } from '@/utils/dimensions';
 import {
-  Container,
-  Stack,
-  Flex,
   Heading,
   Text,
   Center,
   Button,
   VStack,
-  Grid,
   Box,
-  Image
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import Typewriter from 'typewriter-effect';
-// import Image, { StaticImageData } from "next/image";
+import NextLink from "next/link"
+import Accordion from '@/component/Accordion';
+import CardGrid from '@/component/CardGrid';
+import { Footer } from '@/component/Footer';
+import { Ticker } from '@/component/Marquee';
+import { layoutDimensions } from '@/utils/dimensions';
 import { AppStores } from '@/component/Bannner/AppStore';
 export default function HomeHero() {
   return (
@@ -39,13 +33,15 @@ export default function HomeHero() {
               <Text fontSize={["lg", null, null, "xl"]} maxWidth="2xl" variant="light" lineHeight="base">
                 Onde você encontra de tudo!
               </Text>
-              <Button size='lg' as="a" href='/login'>
-                Comece a comprar
-              </Button>
+              <NextLink href={'/login'}>
+                <Button size='lg'>
+                  Comece a comprar
+                </Button>
+              </NextLink>
             </VStack>
           </Center>
         </Box>
-      </Box>
+      </Box >
       <Ticker />
       <CardGrid />
       <AppStores />

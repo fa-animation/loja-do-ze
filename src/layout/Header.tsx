@@ -5,6 +5,7 @@ import {
   IconButton, VisuallyHidden, VStack, useColorModeValue, useDisclosure, ButtonGroup
 } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai'
+import NextLink from "next/link"
 import ThemeToggle from './ButtonToggle';
 export default function NavHero() {
   const mobileNav = useDisclosure();
@@ -24,18 +25,12 @@ export default function NavHero() {
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto" as="nav">
           <Flex>
-            <chakra.a
-              href="/"
-              title="Logo Home Page"
-              display="flex"
-              alignItems="center"
-            >
-
-              <VisuallyHidden>Logo</VisuallyHidden>
-            </chakra.a>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Logo
-            </chakra.h1>
+            <VisuallyHidden>Logo</VisuallyHidden>
+            <NextLink href={'/'}>
+              <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
+                Logo
+              </chakra.h1>
+            </NextLink>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -50,9 +45,11 @@ export default function NavHero() {
             </HStack>
             <ButtonGroup>
               <ThemeToggle />
-              <Button bg="purple.500" color="white" size="sm" as="a" href='/login'>
-                Entrar
-              </Button>
+              <NextLink href={'/login'}>
+                <Button bg="purple.500" color="white" size="sm">
+                  Entrar
+                </Button>
+              </NextLink>
             </ButtonGroup>
             <Box display={{ base: "inline-flex", md: "none" }}>
               <IconButton
@@ -93,9 +90,11 @@ export default function NavHero() {
                 <Button w="full" variant="ghost">
                   Quem somos
                 </Button>
-                <Button w="full" variant="ghost" as="a" href='/login'>
-                  Entrar
-                </Button>
+                <NextLink href={'/login'}>
+                  <Button w="full" variant="ghost">
+                    Entrar
+                  </Button>
+                </NextLink>
               </VStack>
             </Box>
           </HStack>
