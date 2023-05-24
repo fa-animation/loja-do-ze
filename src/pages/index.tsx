@@ -39,7 +39,7 @@ export default function HomeHero() {
               <Text fontSize={["lg", null, null, "xl"]} maxWidth="2xl" variant="light" lineHeight="base">
                 Onde você encontra de tudo!
               </Text>
-              <Button size='lg'>
+              <Button size='lg' as="a" href='/login'>
                 Comece a comprar
               </Button>
             </VStack>

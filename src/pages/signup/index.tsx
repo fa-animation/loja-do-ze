@@ -74,8 +74,11 @@ export default function Signup() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxW="120hc"
-      // py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}
+      <Container
+        mt={6}
+        maxW="120hc"
+        py={{ base: '16', md: '24' }}
+        px={{ base: '0', sm: '8' }}
       >
         <Stack spacing="8">
           <Stack spacing="6">

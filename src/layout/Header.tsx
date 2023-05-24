@@ -50,7 +50,7 @@ export default function NavHero() {
             </HStack>
             <ButtonGroup>
               <ThemeToggle />
-              <Button bg="purple.500" color="white" size="sm">
+              <Button bg="purple.500" color="white" size="sm" as="a" href='/login'>
                 Entrar
               </Button>
             </ButtonGroup>
@@ -93,7 +93,7 @@ export default function NavHero() {
                 <Button w="full" variant="ghost">
                   Quem somos
                 </Button>
-                <Button w="full" variant="ghost">
+                <Button w="full" variant="ghost" as="a" href='/login'>
                   Entrar
                 </Button>
               </VStack>
