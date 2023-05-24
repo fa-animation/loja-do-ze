@@ -103,7 +103,7 @@ export default function Signup() {
                     <FormControl isInvalid={!!errors.nome}>
                       <FormLabel htmlFor="nome">Nome</FormLabel>
                       <Input
-                        id="email" type="text"
+                        id="nome" type="text"
                         {...register('nome')}
                       />
                       <FormErrorMessage>
