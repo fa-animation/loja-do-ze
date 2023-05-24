@@ -9,17 +9,17 @@ export interface InfoCardType {
 
 export const infoCard: InfoCardType[] = [
   {
-    icon: <AiFillHeart />,
+    icon: <AiFillHeart color='white' />,
     title: 'Qualidade na entrega',
     description: 'Nosso compromisso é garantir que cada produto chegue até você com a máxima qualidade e no prazo desejado.',
   },
   {
-    icon: <AiFillSafetyCertificate />,
+    icon: <AiFillSafetyCertificate color='white'/>,
     title: 'Segurança',
     description: 'Tenha as melhores práticas de segurança e com visibilidade e monitoria de todas as operações..',
   },
   {
-    icon: <FaTruck />,
+    icon: <FaTruck color='white'/>,
     title: 'Atualização dos conteúdos',
     description: 'Estaremos atualizando novos produtos, atualizado com as principais novidades..',
   },
