@@ -1,38 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    <strong>Site loja</strong>
+</h1>
 
-## Getting Started
 
-First, run the development server:
+<p align="center">
+    <img src="https://assets.website-files.com/6364b6fd26e298b11fb9391f/6364b6fd26e2983671b93d4b_drawkit-32%20(1).png" alt="nãi faço a menor ideia" width="450"/>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+
+## 🤔 **Como contribuir?**
+
+- Faça um `fork` desse repositório;
+  
+- Cria uma `branch` com a sua feature: `git checkout -b minha-feature`;
+  
+- Faça `commit` das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+
+- Faça push para a sua branch: `git push origin minha-feature`.
+
+### **💻 Tecnologias e Dependência**
+
+Esse projeto foi feito utilizando as seguintes tecnologias:
+
+| Tecnologias | Sites |
+| ------ | ------ |
+| Nextjs | https://nextjs.org/ |
+| Chakra-ui | https://chakra-ui.com/ |
+| TypeScript | https://www.typescriptlang.org/ |
+
+
+### 🚀 **Como rodar o projeto?**
+
+ **Pré-requisito**
+ 
+<blockquote>
+
+- É necessário possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador (recomendado a versão LTS).
+
+- Também, é preciso ter um gerenciador de pacotes o npm e npx já vem por padrão ao instalar o node.j ou **[Yarn](https://www.npmjs.com/package/yarn)**.
+
+- É necessário possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador.
+  
+</blockquote>
+
+<br/>
+
+**1. Faça um clone do repositório:**
+
+```bash 
+  https://github.com/KayoRonald/site-venda-marcos/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Executando a Aplicação:**
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Abrindo o terminal, você pode executar o seguinte comando para entrar no diretório do projeto:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+  cd site-venda-marcos
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**3. Como instalar as dependências**
+Nesse caso, você pode usar o yarn ou npm para instalar e rodar a aplicação.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn 
+```
+```bash
+npm install
+```
 
-## Learn More
+**4. Como rodar o projeto**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn dev
+```
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<hr/>
+<p align="center">
+  <img src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png" width="100" title="Nextjs">
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--tTOh_tYS--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/30i03zlfl3tprbo2m6ug.png" width="150" alt="TypeScript" title="TypeScript">
+  <img src="https://d2eip9sf3oo6c2.cloudfront.net/playlists/square_covers/000/505/265/full/chakra-lv1.png" width="100" alt="chakra" title="chakra"
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 📝 **Licença**
+Esse projeto está sobre a licença MIT. Veja o arquivo **[LICENSE](LICENSE)** para mais detalhes.
