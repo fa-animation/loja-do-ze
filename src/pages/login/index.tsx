@@ -19,7 +19,6 @@ import { PasswordField } from '@/component/PassworldField';
 import NextLink from 'next/link'
 
 export default function Login() {
-  const bgImg = `linear-gradient(to bottom, rgb(0 0 0),#0a0a0a6e,rgb(0 0 0)), url("https://raw.githubusercontent.com/FelipePDS/otakinho-store/master/assets/images/bgBoku.jpg") top left / cover`
   return (
     <>
       <Head>
@@ -28,7 +27,7 @@ export default function Login() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
+      <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }} mt={11}>
         <Stack spacing="8">
           <Stack spacing="6">
             {/* <Logo /> */}

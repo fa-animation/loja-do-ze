@@ -1,0 +1,10 @@
+/*  */
+.Typewriter {
+  display: inline;
+}
+
+@media screen and (max-width: 600px) {
+  .Typewriter {
+    display: block;
+  }
+}

@@ -1,17 +1,19 @@
-import CardGrid from '@/component/CardGrid';
 import {
-  Container,
-  Stack,
-  Flex,
   Heading,
   Text,
-  Img as Image,
   Center,
-  Button
+  Button,
+  VStack,
+  Box,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import Typewriter from 'typewriter-effect';
-
+import NextLink from "next/link"
+import Accordion from '@/component/Accordion';
+import CardGrid from '@/component/CardGrid';
+import { Footer } from '@/component/Footer';
+import { Ticker } from '@/component/Marquee';
+import { layoutDimensions } from '@/utils/dimensions';
+import { AppStores } from '@/component/Bannner/AppStore';
 export default function HomeHero() {
   return (
     <>
@@ -21,93 +23,30 @@ export default function HomeHero() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxW={'7xl'}>
-        <Stack
-          align={'center'}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}
-          direction={{ base: 'column', lg: 'row' }}>
-          <Stack flex={1} spacing={{ base: 5, md: 10 }} mb={3}>
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
-            >
-              <Text
-                as={'span'}
-                position={'relative'}
-                _after={{
-                  content: "''",
-                  width: 'full',
-                  height: '30%',
-                  position: 'absolute',
-                  bottom: 1,
-                  left: 0,
-                  bg: 'purple.400',
-                  zIndex: -1,
-                }}>
+      <Box position="relative">
+        <Box px={layoutDimensions.px}>
+          <Center>
+            <VStack spacing={[6, null, 8]} textAlign="center" py={["20%", null, null, "10%"]}>
+              <Heading as="h1" size={["2xl", null, null, "3xl"]} maxWidth="4xl" lineHeight="shorter">
                 Loja do zé
+              </Heading>
+              <Text fontSize={["lg", null, null, "xl"]} maxWidth="2xl" variant="light" lineHeight="base">
+                Onde você encontra de tudo!
               </Text>
-              <br />
-              <Text as={'span'} color={'teal.400'}>
-                <Typewriter
-                  options={{
-                    strings: ['Qualidade', 'Excepcional', 'Entrega rápida'],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-
-              </Text>
-            </Heading>
-            <Text fontSize='xl'>
-              loja do zé - Sua loja online de confiança.
-            </Text>
-            <Stack
-              spacing={{ base: 4, sm: 6 }}
-              direction='column'
-            >
-
-              <Button
-                bg="purple.500"
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                color='white'
-                w="100%"
-                _hover={{
-                  bg: 'purple.600'
-                }}
-                outline={'none'}
-              >
-                Começar a comprar
-              </Button>
-            </Stack>
-          </Stack>
-          <Flex
-            flex={1}
-            justify={'center'}
-            align={'center'}
-            w={'full'}>
-            <Center>
-              <Image
-                alt={'Hero Image'}
-                objectFit={'cover'}
-                alignItems='center'
-                w={'100%'}
-                h={'100%'}
-                loading="lazy"
-                src={
-                  'https://static.vecteezy.com/system/resources/previews/011/023/644/non_2x/hand-drawn-cute-shop-illustration-on-transparent-background-png.png'
-                }
-              />
-            </Center>
-          </Flex>
-        </Stack>
-      </Container>
+              <NextLink href={'/login'}>
+                <Button size='lg'>
+                  Comece a comprar
+                </Button>
+              </NextLink>
+            </VStack>
+          </Center>
+        </Box>
+      </Box >
+      <Ticker />
       <CardGrid />
-      lklsklwklws
+      <AppStores />
+      <Accordion />
+      <Footer />
     </>
   );
 }
