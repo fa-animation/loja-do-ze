@@ -61,7 +61,7 @@ export const AppStores = () => {
             />
             <Box textAlign="left">
               <Text mb={1} fontSize="xs">
-                Baixe agora no
+                Baixe agora na
               </Text>
               <Text mt={-1} fontFamily="sans-serif" fontSize="sm" fontWeight="semibold">
                 Mac App Store

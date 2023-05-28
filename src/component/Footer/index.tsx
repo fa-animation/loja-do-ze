@@ -12,7 +12,7 @@ export const Footer = (props: FlexProps) => {
           </Text>
           <Text fontSize="sm" textAlign="right">
             KayoRonald{" "}
-            <Link variant="colored" href="https://github.com/KayoRonald/" isExternal>
+            <Link variant="colored" href="https://github.com/KayoRonald/site-venda-marcos" isExternal>
               view source
             </Link>
           </Text>
