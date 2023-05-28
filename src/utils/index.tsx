@@ -1,11 +1,21 @@
+import { IconType } from 'react-icons';
 import { AiFillSafetyCertificate, AiFillHeart } from 'react-icons/ai';
-import { FaTruck } from 'react-icons/fa'
+import { FaTruck, FaCity } from 'react-icons/fa'
+import { HiEmojiHappy } from 'react-icons/hi'
+import { MdPeople } from 'react-icons/md'
 
 export interface InfoCardType {
   icon: JSX.Element;
   title: string;
   description: string;
 }
+
+export interface StatsType {
+  icon: IconType;
+  value: number;
+  text: string;
+}
+
 
 export const infoCard: InfoCardType[] = [
   {
@@ -14,14 +24,37 @@ export const infoCard: InfoCardType[] = [
     description: 'Nosso compromisso é garantir que cada produto chegue até você com a máxima qualidade e no prazo desejado.',
   },
   {
-    icon: <AiFillSafetyCertificate color='white' size={22}/>,
+    icon: <AiFillSafetyCertificate color='white' size={22} />,
     title: 'Segurança',
     description: 'Tenha as melhores práticas de segurança e com visibilidade e monitoria de todas as operações..',
   },
   {
-    icon: <FaTruck color='white' size={22}/>,
+    icon: <FaTruck color='white' size={22} />,
     title: 'Atualização dos conteúdos',
     description: 'Estaremos atualizando novos produtos, atualizado com as principais novidades..',
+  },
+];
+
+export const statsData: StatsType[] = [
+  {
+    icon: MdPeople,
+    value: 360,
+    text: 'USUÁRIOS',
+  },
+  {
+    icon: FaCity,
+    value: 180,
+    text: 'CIDADES Zé',
+  },
+  {
+    icon: FaTruck,
+    value: 370,
+    text: 'PEDIDOS ENTREGUES',
+  },
+  {
+    icon: HiEmojiHappy,
+    value: 322,
+    text: 'CLIENTES FELIZES',
   },
 ];
 

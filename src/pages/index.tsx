@@ -12,8 +12,9 @@ import Accordion from '@/component/Accordion';
 import CardGrid from '@/component/CardGrid';
 import { Footer } from '@/component/Footer';
 import { Ticker } from '@/component/Marquee';
-import { layoutDimensions } from '@/utils/dimensions';
 import { AppStores } from '@/component/Bannner/AppStore';
+import Stats from '@/component/StatsCount';
+import { layoutDimensions } from '@/utils/dimensions';
 export default function HomeHero() {
   return (
     <>
@@ -44,6 +45,7 @@ export default function HomeHero() {
       </Box >
       <Ticker />
       <CardGrid />
+      <Stats />
       <AppStores />
       <Accordion />
       <Footer />
