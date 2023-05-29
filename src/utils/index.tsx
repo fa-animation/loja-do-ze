@@ -1,21 +1,8 @@
-import { IconType } from 'react-icons';
 import { AiFillSafetyCertificate, AiFillHeart } from 'react-icons/ai';
 import { FaTruck, FaCity } from 'react-icons/fa'
 import { HiEmojiHappy } from 'react-icons/hi'
 import { MdPeople } from 'react-icons/md'
-
-export interface InfoCardType {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-}
-
-export interface StatsType {
-  icon: IconType;
-  value: number;
-  text: string;
-}
-
+import { InfoCardType, StatsType } from '@/types';
 
 export const infoCard: InfoCardType[] = [
   {

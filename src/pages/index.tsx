@@ -10,12 +10,13 @@ import Head from 'next/head';
 import NextLink from "next/link"
 import Accordion from '@/component/Accordion';
 import CardGrid from '@/component/CardGrid';
-import { Footer } from '@/component/Footer';
 import { Ticker } from '@/component/Marquee';
 import { AppStores } from '@/component/Bannner/AppStore';
 import Stats from '@/component/StatsCount';
 import { layoutDimensions } from '@/utils/dimensions';
-export default function HomeHero() {
+import Footer from '@/component/Footer';
+
+export default function Home() {
   return (
     <>
       <Head>
