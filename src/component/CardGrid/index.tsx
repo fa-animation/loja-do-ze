@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Container, chakra, Grid, Box, Flex, Heading, Text, Center, useColorModeValue
 } from '@chakra-ui/react';
-import { InfoCardType, infoCard } from '@/utils';
+import { infoCard } from '@/utils';
+import { InfoCardType } from '@/types';
 
 export default function CardGrid() {
   return (

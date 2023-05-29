@@ -6,11 +6,11 @@ export const AppStores = () => {
   return (
     <Box
       textAlign={"center"}
-      mt={7}
-      mb={7}
+      mb={8}
       w="full"
-      p={[4, 8]}
+      // p={[4, 8]}
       rounded="lg"
+      pb={4}
     >
       <Container pt="4rem" maxW="1280px" >
         <Heading mb={2} fontWeight={"bold"}>
