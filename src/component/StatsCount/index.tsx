@@ -1,48 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Center, Grid, Icon, Text, chakra } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Grid, Text, chakra } from '@chakra-ui/react';
 import { statsData } from '@/utils';
-
-const CountAnimation = ({ value, duration }: any) => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const end = parseInt(value);
-    const difference = end - start;
-    const increment = Math.ceil(difference / (duration * 60));
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(start);
-      }
-    }, 1000 / 60);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, [value, duration]);
-
-  return (
-    <Text fontSize="3xl" fontWeight="bold">
-      {count.toLocaleString()}
-    </Text>
-  );
-};
+import { StatsType } from '@/types';
+import { HeadingChakra } from './HeadingChakra';
+import { StatsIcon } from './StatsIcon';
+import { CountAnimation } from './CountAnimation';
 
 const Stats = () => {
   return (
     <Box
-      bg={"purple.700"}
-      mb={7}
       w="full"
       p={[4, 8]}
       textAlign={"center"}
       justifyContent="center"
-      color="white"
     >
-      <Box maxW="760px" mx="auto" textAlign="center"  mb="5">
+      <Box maxW="760px" mx="auto" textAlign="center" mb="5">
         <chakra.h2 textStyle="heading" fontSize={{ base: '2rem', md: '2.5rem' }}>
           Nossas métricas
         </chakra.h2>
@@ -51,34 +23,25 @@ const Stats = () => {
         </Text>
       </Box>
       <Grid
-        templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(4, 28vmin)' }}
+        templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 28vmin)' }}
         gap={2}
         justifyContent="center"
+        color="white"
       >
-        {statsData.map((item, index) => (
+        {statsData.map((item: StatsType, index) => (
           <Box
             key={index}
-            bg={"purple.600"}
+            bg={"gray.600"}
             p={2}
             borderBottom="5px solid #18f98f"
+            textAlign={"center"}
           >
-            <Center>
-              <Icon
-                mr={3}
-                w={7}
-                h={7}
-                as={item.icon}
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fab"
-                data-icon="apple"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 384 512"
-                textAlign={"center"}
-              />
-            </Center>
-            <CountAnimation value={item.value} duration={2} />
-            <Text>{item.text}</Text>
+            <StatsIcon
+              icon={item.icon}
+              text={item.text}
+            />
+            <CountAnimation value={item.value} duration={4} />
+            <HeadingChakra>{item.text}</HeadingChakra>
           </Box>
         ))}
       </Grid>
