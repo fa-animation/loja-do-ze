@@ -41,7 +41,7 @@ const Stats = () => {
                 icon={item.icon}
                 text={item.text}
               />
-              <CountAnimation value={item.value} duration={4} />
+              <CountAnimation value={item.value} duration={5} />
               <HeadingChakra>{item.text}</HeadingChakra>
             </Box>
           ))}
