@@ -9,7 +9,6 @@ export const CountAnimation = ({ value, duration }: any) => {
 
   useEffect(() => {
     if (inView) {
-      console.log("CVVVVVVV")
       let start = 0;
       const end = parseInt(value);
       const difference = end - start;
