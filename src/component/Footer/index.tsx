@@ -16,7 +16,7 @@ const Footer = () => (
           <Box  minW="100px">
           </Box>
         </SimpleGrid>
-          <Newsletter />
+          <Newsletter width={{ base: 'md', md: 'sm' }}/>
         </Stack>
       </Stack>
       <Flex

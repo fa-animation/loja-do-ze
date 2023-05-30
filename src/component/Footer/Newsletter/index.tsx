@@ -2,6 +2,7 @@
 import {
   Button,
   chakra,
+  HTMLChakraProps,
   Input,
   Stack,
   Text,
@@ -9,9 +10,9 @@ import {
 } from '@chakra-ui/react';
 import { HeadingChakra } from '../../StatsCount/HeadingChakra';
 
-export const Newsletter = () => {
+export const Newsletter = (props: HTMLChakraProps<'form'>) => {
   return (
-    <chakra.form width={{ base: 'md', md: 'sm' }} onSubmit={(e) => e.preventDefault()}>
+    <chakra.form {...props} onSubmit={(e) => e.preventDefault()} maxW="300px">
       <Stack spacing="4">
         <HeadingChakra>ASSINE NOSSA NEWSLETTER</HeadingChakra>
         <Text>
