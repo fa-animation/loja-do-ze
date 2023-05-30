@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Text, chakra } from '@chakra-ui/react';
+import { Box, Container, Grid, Text, chakra } from '@chakra-ui/react';
 import { statsData } from '@/utils';
 import { StatsType } from '@/types';
 import { HeadingChakra } from './HeadingChakra';
@@ -22,29 +22,31 @@ const Stats = () => {
           Veja os resultados do nosso trabalho
         </Text>
       </Box>
-      <Grid
-        templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 28vmin)' }}
-        gap={2}
-        justifyContent="center"
-        color="white"
-      >
-        {statsData.map((item: StatsType, index) => (
-          <Box
-            key={index}
-            bg={"gray.600"}
-            p={2}
-            borderBottom="5px solid #18f98f"
-            textAlign={"center"}
-          >
-            <StatsIcon
-              icon={item.icon}
-              text={item.text}
-            />
-            <CountAnimation value={item.value} duration={4} />
-            <HeadingChakra>{item.text}</HeadingChakra>
-          </Box>
-        ))}
-      </Grid>
+      <Container maxWidth="107ch">
+        <Grid
+          templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 28vmin)' }}
+          gap={2}
+          justifyContent="center"
+          color="white"
+        >
+          {statsData.map((item: StatsType, index) => (
+            <Box
+              key={index}
+              bg={"gray.600"}
+              p={2}
+              borderBottom="5px solid #18f98f"
+              textAlign={"center"}
+            >
+              <StatsIcon
+                icon={item.icon}
+                text={item.text}
+              />
+              <CountAnimation value={item.value} duration={4} />
+              <HeadingChakra>{item.text}</HeadingChakra>
+            </Box>
+          ))}
+        </Grid>
+      </Container>
     </Box>
   );
 };
