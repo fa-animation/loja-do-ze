@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <AuthProvider>
       <Chakra>
         <NextNprogress
-          color="#47C8FF"
+          color="#4299E1"
           startPosition={0.3}
           stopDelayMs={0}
           height={5}
