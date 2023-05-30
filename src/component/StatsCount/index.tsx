@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Text, chakra } from '@chakra-ui/react';
+import { Box, Container, Grid, Text, chakra, SimpleGrid } from '@chakra-ui/react';
 import { statsData } from '@/utils';
 import { StatsType } from '@/types';
 import { HeadingChakra } from './HeadingChakra';
@@ -23,10 +23,10 @@ const Stats = () => {
         </Text>
       </Box>
       <Container maxWidth="107ch">
-        <Grid
-          templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 28vmin)' }}
-          gap={2}
-          justifyContent="center"
+        <SimpleGrid
+          columns={[1, 2,  4]} 
+          spacing="10px" 
+          pt="3"
           color="white"
         >
           {statsData.map((item: StatsType, index) => (
@@ -45,7 +45,7 @@ const Stats = () => {
               <HeadingChakra>{item.text}</HeadingChakra>
             </Box>
           ))}
-        </Grid>
+        </SimpleGrid>
       </Container>
     </Box>
   );
