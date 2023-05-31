@@ -93,7 +93,7 @@ export default function Home() {
             position={'relative'}
           >
             <Blob
-              mt={5}
+              mt={9}
               w={'100%'}
               h={'122%'}
               position={'absolute'}
