@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
           color="#4299E1"
           startPosition={0.3}
           stopDelayMs={0}
-          height={5}
+          height={7}
           showOnShallow={true}
           options={{ easing: 'ease', speed: 500 }}
         />

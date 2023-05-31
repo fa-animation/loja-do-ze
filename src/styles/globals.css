@@ -1,6 +1,17 @@
-/*  */
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: .8em;
+}
+
 .Typewriter {
   display: inline;
+}
+
+.Typewriter__cursor{
+  color: #B794F4;
 }
 
 @media screen and (max-width: 600px) {

@@ -4,7 +4,7 @@ import {
   Box, Button, chakra, CloseButton, Flex, HStack,
   IconButton, VisuallyHidden, VStack, useColorModeValue, useDisclosure, ButtonGroup
 } from '@chakra-ui/react';
-import { AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineMenu, AiFillApple } from 'react-icons/ai'
 import NextLink from "next/link"
 import ThemeToggle from './ButtonToggle';
 export default function NavHero() {
@@ -28,7 +28,8 @@ export default function NavHero() {
             <VisuallyHidden>Logo</VisuallyHidden>
             <NextLink href={'/'}>
               <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-                Logo
+                {/* Logo */}
+                <AiFillApple />
               </chakra.h1>
             </NextLink>
           </Flex>

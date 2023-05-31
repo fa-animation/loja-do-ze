@@ -15,8 +15,9 @@ export const AppStoreButton = ({ icon, text }: IconCtx) => {
       rounded="lg"
       size="lg"
       display="inline-flex"
-      justifyItems={"center"}
-      justifyContent="center"
+      // justifyItems={"center"}
+      // justifyContent="center"
+      alignItems={"center"}
       px={4}
       py={2.5}
       bg="gray.700"

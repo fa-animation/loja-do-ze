@@ -45,6 +45,6 @@ export const statsData: StatsType[] = [
   },
 ];
 
-export const MARQUEE_TEXT = ["Roupas de crianças", "Saúde", "Lazer", "Brinquedos"];
+export const MARQUEE_TEXT = ["Roupas de crianças", "Saúde", "Lazer", "Brinquedos", "Moda masculina"];
 
-export const MARQUEE_SEPARATOR_COLORS = ["teal.300", "blue.300", "pink.300", "orange.300"];
+export const MARQUEE_SEPARATOR_COLORS = ["teal.300", "blue.300", "pink.300", "orange.300", "purple.500"];

@@ -34,7 +34,7 @@ const Stats = () => {
               key={index}
               bg={"gray.600"}
               p={2}
-              borderBottom="5px solid #18f98f"
+              borderBottom="5px solid #B794F4"
               textAlign={"center"}
             >
               <StatsIcon
