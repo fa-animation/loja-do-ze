@@ -2,25 +2,27 @@ import React from 'react';
 import {
   Container, chakra, Grid, Box, Flex, Heading, Text, Center, useColorModeValue
 } from '@chakra-ui/react';
-import { InfoCardType, infoCard } from '@/utils';
+import { infoCard } from '@/utils';
+import { InfoCardType } from '@/types';
 
 export default function CardGrid() {
   return (
     <Box
       as="section"
-      bg="teal.400"
-      mt={10}
+      bg="teal.600"
+      mt={5}
+      id="cardgrid"
     >
-      <Container py="120px" maxW="1280px" pt="0">
+      <Container py="50px" maxW="1280px" pt="0">
         <Box maxW="760px" mx="auto" textAlign="center" >
-          <chakra.h2 textStyle="heading" mb="5" fontSize={{ base: '2rem', md: '2.5rem' }}>
+          <chakra.h1 fontWeight={"bold"} textStyle="heading" mb="5" fontSize={{ base: '2rem', md: '2.5rem' }}>
             O que oferecemos?
-          </chakra.h2>
+          </chakra.h1>
         </Box>
         <Grid
           templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }}
           gap={10}
-          px={{ md: 12 }}
+          px={{ md: 6 }}
         >
           {infoCard.map((data: InfoCardType, index: number) => (
             <InfoCards
