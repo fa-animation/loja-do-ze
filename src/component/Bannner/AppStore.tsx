@@ -1,10 +1,17 @@
-import { Box, Heading, Text, Container, Stack, Button } from "@chakra-ui/react";
+import { Box, Heading, Text, Container, Link, Icon, Stack } from "@chakra-ui/react";
 import Typewriter from 'typewriter-effect';
-import { FaAppStore, FaGooglePlay } from 'react-icons/fa'
+import { FaApple, FaGooglePlay } from 'react-icons/fa'
+import { AppStoreButton } from "./AppStoreButton";
 
 export const AppStores = () => {
   return (
-    <Box textAlign={"center"} mt={7} mb={7}>
+    <Box
+      textAlign={"center"}
+      mb={8}
+      w="full"
+      rounded="lg"
+      pb={4}
+    >
       <Container pt="4rem" maxW="1280px" >
         <Heading mb={2} fontWeight={"bold"}>
           Compre rápido de qualquer {" "}
@@ -12,7 +19,7 @@ export const AppStores = () => {
             options={{
               strings: ['lugar', 'momento'],
               autoStart: true,
-              loop: true,         
+              loop: true,
             }}
           />
         </Heading>
@@ -23,29 +30,17 @@ export const AppStores = () => {
           mt={2}
           justifyContent={"center"}
           justifyItems={"center"}
-          spacing={8}
+          spacing={3}
           direction={{ base: 'column', sm: 'row' }}
         >
-          <Button
-            leftIcon={<FaGooglePlay />}
-            px="40px"
-            fontSize="1.2rem"
-            as="a"
-            size="lg"
-            cursor={"pointer"}
-          >
-            Google Play
-          </Button>
-          <Button
-            leftIcon={<FaAppStore />}
-            px="40px"
-            fontSize="1.2rem"
-            as="a"
-            size="lg"
-            cursor={"pointer"}
-          >
-            AppStore
-          </Button>
+          <AppStoreButton
+            icon={FaApple}
+            text="Mac App Store"
+          />
+          <AppStoreButton
+            icon={FaGooglePlay}
+            text="Google Play"
+          />
         </Stack>
       </Container>
     </Box>
