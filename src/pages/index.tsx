@@ -21,6 +21,7 @@ import { AppStores } from '@/component/Bannner/AppStore';
 import Stats from '@/component/StatsCount';
 import Footer from '@/component/Footer';
 import { FaSearchPlus, FaArrowDown } from 'react-icons/fa'
+import { Slide } from '@/component/Slider';
 export default function Home() {
   return (
     <>
@@ -126,6 +127,7 @@ export default function Home() {
       <Ticker />
       <CardGrid />
       <Stats />
+      <Slide />
       <AppStores />
       <Accordion />
       <Footer />
