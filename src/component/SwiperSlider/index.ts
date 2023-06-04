@@ -1,0 +1,1 @@
+export { FeedbackSwiper } from './SwiperFeedback';
