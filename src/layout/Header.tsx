@@ -22,6 +22,13 @@ export default function NavHero() {
         px={{ base: 2, sm: 4 }}
         py={4}
         mb={2}
+        css={{
+          backdropFilter: 'saturate(180%) blur(5px)',
+          backgroundColor: useColorModeValue(
+            'rgba(255, 255, 255, 0.8)',
+            'rgba(26, 32, 44, 0.8)'
+          ),
+        }}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto" as="nav">
           <Flex>

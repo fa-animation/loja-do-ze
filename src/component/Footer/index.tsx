@@ -20,7 +20,9 @@ const Footer = () => (
         </Stack>
       </Stack>
       <Flex
-        justifyContent="space-between"
+        justifyContent={{ base: 'center', lg: 'space-between' }}
+        flexDirection={{ base: 'column', lg: 'row' }}
+        alignItems={{base: 'center'}}
       >
         <Text fontSize="sm" textAlign="right">
           KayoRonald{" "}

@@ -32,10 +32,11 @@ const Stats = () => {
           {statsData.map((item: StatsType, index) => (
             <Box
               key={index}
-              bg={"gray.600"}
+              bg={"gray.700"}
               p={2}
               borderBottom="5px solid #B794F4"
               textAlign={"center"}
+              rounded="lg"
             >
               <StatsIcon
                 icon={item.icon}
