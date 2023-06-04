@@ -2,7 +2,9 @@ import {
   Box, Container, Heading,
   Text, Badge
 } from "@chakra-ui/react"
+import getConfig from "next/config";
 import Head from "next/head";
+const { publicRuntimeConfig } = getConfig()
 
 export default function HomePage() {
   return (
@@ -61,13 +63,13 @@ export default function HomePage() {
           <Box color="black" mt={3} bg="gray.400" p={3} borderLeftWidth="16px" borderLeftColor="purple.500" padding="7px" borderRadius="4px" >
             <Box display="flex" justifyContent={"space-between"}>
               <Text>
-                <strong>Autor: {process.env.VERCEL_GIT_COMMIT_AUTHOR_LOGIN}</strong>
+                <strong>Autor: {publicRuntimeConfig.author}</strong>
               </Text>
               <Badge bg={"#2f5888"}>GITHUB</Badge>
             </Box>
             <Box>
-              <Text>Ultimo commit: {process.env.VERCEL_GIT_COMMIT_MESSAGE}</Text>
-              <Text>hash: {process.env.VERCEL_GIT_COMMIT_SHA}</Text>
+              <Text>Ultimo commit: {publicRuntimeConfig.message}</Text>
+              <Text>hash: {publicRuntimeConfig.message_sha}</Text>
             </Box>
           </Box>
         </Box>
