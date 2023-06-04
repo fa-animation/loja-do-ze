@@ -1,14 +1,16 @@
 import type { AppProps } from 'next/app'
-import { Chakra } from '@/component/ChakraProvider/Chakra'
+import { Chakra as ChakraProvider } from '@/component/ChakraProvider/Chakra'
 import { AuthProvider } from '@/contexts/AuthContext'
 import NextNprogress from 'nextjs-progressbar'
 import Header from '@/layout/Header'
 import '../styles/globals.css'
+import Meta from '@/component/meta'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
-      <Chakra>
+      <Meta/>
+      <ChakraProvider>
         <NextNprogress
           color="#4299E1"
           startPosition={0.3}
@@ -19,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <Header />
         <Component {...pageProps} />
-      </Chakra>
+      </ChakraProvider>
     </AuthProvider>
   )
 }

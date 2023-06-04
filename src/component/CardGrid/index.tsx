@@ -15,7 +15,7 @@ export default function CardGrid() {
     >
       <Container py="50px" maxW="1280px" pt="0">
         <Box maxW="760px" mx="auto" textAlign="center" >
-          <chakra.h1 fontWeight={"bold"} textStyle="heading" mb="5" fontSize={{ base: '2rem', md: '2.5rem' }}>
+          <chakra.h1 fontWeight={"bold"} color="white" textStyle="heading" mb="5" fontSize={{ base: '2rem', md: '2.5rem' }}>
             O que oferecemos?
           </chakra.h1>
         </Box>

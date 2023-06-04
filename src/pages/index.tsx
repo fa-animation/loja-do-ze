@@ -21,6 +21,8 @@ import { AppStores } from '@/component/Bannner/AppStore';
 import Stats from '@/component/StatsCount';
 import Footer from '@/component/Footer';
 import { FaSearchPlus, FaArrowDown } from 'react-icons/fa'
+import { FeedbackSwiper } from '@/component/SwiperSlider/';
+
 export default function Home() {
   return (
     <>
@@ -126,6 +128,7 @@ export default function Home() {
       <Ticker />
       <CardGrid />
       <Stats />
+      <FeedbackSwiper />
       <AppStores />
       <Accordion />
       <Footer />
