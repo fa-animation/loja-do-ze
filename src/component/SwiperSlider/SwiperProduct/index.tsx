@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { CSSProperties } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { sliderSettings } from '../config';
 import { ProductCard } from './ProductCard';
@@ -17,7 +17,10 @@ export const ProductSwiper: NextPage<any> = ({ data }) => {
     (el, index) => `Slide ${index + 1}`
   );
   return (
-    <Box  w="100%" h="100%">
+    <Box w="100%" h="100%">
+      <Heading size="md" my="1.5rem">
+       Produtos Exemplos
+      </Heading>
       <Swiper {...sliderSettings} style={{ width: '100%', height: '100%' }}>
         <SwiperNavButtons />
         {slides.map((slideContent, index) => (
