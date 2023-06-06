@@ -6,7 +6,6 @@ import { sliderSettings } from '../config';
 import { ProductCard } from './ProductCard';
 import { SwiperNavButtons } from '../SwiperNavButtons';
 // import 'swiper/css';
-
 const slideStyles: CSSProperties = {
   boxSizing: 'border-box',
   maxWidth: '350px',
@@ -17,18 +16,20 @@ export const ProductSwiper: NextPage<any> = ({ data }) => {
     (el, index) => `Slide ${index + 1}`
   );
   return (
-    <Box w="100%" h="100%">
-      <Heading size="md" my="1.5rem">
-       Produtos Exemplos
-      </Heading>
-      <Swiper {...sliderSettings} style={{ width: '100%', height: '100%' }}>
-        <SwiperNavButtons />
-        {slides.map((slideContent, index) => (
-          <SwiperSlide key={index} style={slideStyles}>
-            <ProductCard />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Box w={{ base: '100%', lg: '90%' }} mx="auto" p="2rem">
+      <Box w="100%" h="100%">
+        <Heading size="md" my="1.5rem">
+          Produtos Exemplos
+        </Heading>
+        <Swiper {...sliderSettings} style={{ width: '100%', height: '100%' }}>
+          <SwiperNavButtons />
+          {slides.map((slideContent, index) => (
+            <SwiperSlide key={index} style={slideStyles}>
+              <ProductCard />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
     </Box>
   );
 }
