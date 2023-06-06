@@ -10,7 +10,7 @@ import 'swiper/css';
 export const FeedbackSwiper = () => {
   return (
     <Box>
-      <Heading textAlign={"center"} mb={1}>Opiniões dos nossos clientes</Heading>
+      <Heading as="h3" textAlign={"center"} mb={1}>Opiniões dos nossos clientes</Heading>
       <Swiper {...sliderSettings}>
         <SwiperNavButtons />
         {feedbackData.map((item, el) => {
