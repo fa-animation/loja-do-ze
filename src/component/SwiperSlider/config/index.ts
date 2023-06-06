@@ -1,4 +1,5 @@
-import { A11y, Autoplay, Navigation, SwiperOptions } from "swiper";
+import { SwiperOptions } from 'swiper/types/swiper-options';
+import { A11y, Autoplay, Navigation } from "swiper";
 
 export const sliderSettings: SwiperOptions = {
   modules: [Navigation, A11y, Autoplay],

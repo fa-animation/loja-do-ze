@@ -1,3 +1,4 @@
+import { ProductSwiper } from "@/component/SwiperSlider";
 import { Box, Button, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 import Head from 'next/head';
 import NextLink from 'next/link';
@@ -11,7 +12,7 @@ export default function HomePage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box bg="pink.500" height={500} color="white" w="full">
+      <Box bg="orange.500" height={500} color="white" w="full">
         <Container maxW={'7xl'}>
           <Stack flex={1} spacing={{ base: 5, md: 10 }} py={{ base: 20, md: 28 }}>
             <Box maxW='32rem'>
@@ -45,11 +46,9 @@ export default function HomePage() {
         </Container>
       </Box>
       <Banner />
-      <Box mt={10}>
-        <Text>
-          sss
-        </Text>
-      </Box>
+      <ProductSwiper data="aaaa"/>
+      <ProductSwiper data="aaaa"/>
+      <ProductSwiper data="aaaa"/>
     </>
   )
 }

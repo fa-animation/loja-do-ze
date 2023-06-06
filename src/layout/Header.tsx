@@ -21,7 +21,7 @@ export default function NavHero() {
         w="full"
         px={{ base: 2, sm: 4 }}
         py={4}
-        mb={2}
+        mb={10}
         css={{
           backdropFilter: 'saturate(180%) blur(5px)',
           backgroundColor: useColorModeValue(
