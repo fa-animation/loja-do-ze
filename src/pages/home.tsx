@@ -1,5 +1,6 @@
 import Footer from "@/component/Footer";
 import { ProductSwiper } from "@/component/SwiperSlider";
+import { produtosDestaque } from "@/utils/product";
 import { Box, Button, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 import Head from 'next/head';
 import NextLink from 'next/link';
@@ -47,10 +48,11 @@ export default function HomePage() {
         </Container>
       </Box>
       <Banner />
-      <ProductSwiper />
-      <ProductSwiper />
-      <ProductSwiper />
-      <Footer/>
+      <ProductSwiper
+        message="Produtos para Você"
+        data={produtosDestaque}
+      />
+      <Footer />
     </>
   )
 }

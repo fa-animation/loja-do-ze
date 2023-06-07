@@ -5,27 +5,41 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { sliderSettings } from '../config';
 import { ProductCard } from './ProductCard';
 import { SwiperNavButtons } from '../SwiperNavButtons';
-// import 'swiper/css';
+
 const slideStyles: CSSProperties = {
   boxSizing: 'border-box',
   maxWidth: '350px',
+  display: 'flex'
 };
 
-export const ProductSwiper: NextPage<any> = ({ data }) => {
-  const slides = Array.from({ length: 20 }).map(
-    (el, index) => `Slide ${index + 1}`
-  );
+
+type ProdcutProps = {
+  id: number;
+  title: string;
+  description: string;
+  price: number
+  photo: string;
+  // category: string;
+  // rating: number;
+}
+
+type ICard = {
+  data: ProdcutProps[]
+  message: string;
+}
+
+export const ProductSwiper: NextPage<ICard> = ({ data, message }) => {
   return (
     <Box w={{ base: '100%', lg: '90%' }} mx="auto" p="2rem">
       <Box w="100%" h="100%">
         <Heading size="md" my="1.5rem">
-          Produtos Exemplos
+          {message}
         </Heading>
         <Swiper {...sliderSettings} style={{ width: '100%', height: '100%' }}>
           <SwiperNavButtons />
-          {slides.map((slideContent, index) => (
-            <SwiperSlide key={index} style={slideStyles}>
-              <ProductCard />
+          {data.map((item) => (
+            <SwiperSlide key={item.id} style={slideStyles}>
+              <ProductCard {...item}/>
             </SwiperSlide>
           ))}
         </Swiper>
