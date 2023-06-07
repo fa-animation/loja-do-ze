@@ -45,6 +45,24 @@ export const statsData: StatsType[] = [
   },
 ];
 
+export const siteStatus = {
+  status: 'Online',
+  message: 'O site está funcionando normalmente.',
+  uptime: 98.5,
+  issues: [
+    {
+      id: 1,
+      title: 'Problema com o servidor de banco de dados',
+      status: 'Investigando',
+    },
+    {
+      id: 2,
+      title: 'Interrupção do serviço de e-mail',
+      status: 'Resolvido',
+    },
+  ],
+};
+
 export const MARQUEE_TEXT = ["Roupas de crianças", "Saúde", "Lazer", "Brinquedos", "Moda masculina"];
 
 export const MARQUEE_SEPARATOR_COLORS = ["teal.300", "blue.300", "pink.300", "orange.300", "purple.500"];

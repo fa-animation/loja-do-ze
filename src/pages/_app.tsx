@@ -5,11 +5,11 @@ import NextNprogress from 'nextjs-progressbar'
 import Header from '@/layout/Header'
 import '../styles/globals.css'
 import Meta from '@/component/meta'
+import Layout from '@/layout/Layout'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
-      <Meta/>
       <ChakraProvider>
         <NextNprogress
           color="#4299E1"
@@ -20,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
           options={{ easing: 'ease', speed: 500 }}
         />
         <Header />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ChakraProvider>
     </AuthProvider>
   )
