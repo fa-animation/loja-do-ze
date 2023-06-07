@@ -3,7 +3,7 @@ import { Newsletter } from './Newsletter';
 const currentYear = new Date().getFullYear();
 
 const Footer = () => (
-  <Box as="footer" mx="auto" maxW="7xl" py="6" px={{ base: '4', md: '8' }}>
+  <Box as="footer" mx="auto" maxW="8xl" py="6" px={{ base: '4', md: '8' }}>
     <Stack spacing="10" divider={<StackDivider bg={"teal.700"} h={2} />}>
       <Stack direction={{ base: 'column', lg: 'row' }} spacing={{ base: '10', lg: '28' }}>
         <Box minW="100px">

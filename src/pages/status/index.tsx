@@ -1,3 +1,6 @@
+import { StatusHeading } from "@/component/Status/StatusHeading";
+import { StatusService } from "@/component/Status/StatusService";
+import { siteStatus } from "@/utils";
 import {
   Box, Container, Heading,
   Text, Badge
@@ -6,7 +9,26 @@ import getConfig from "next/config";
 import Head from "next/head";
 const { publicRuntimeConfig } = getConfig()
 
-export default function HomePage() {
+export default function StatusPage() {
+  const services = [
+    { name: 'API', status: 'Problemas de desempenho', color: 'blue.400' },
+    { name: 'CDN', status: 'Operacional', color: 'green.400' },
+    { name: 'Processador de pagamento', status: 'Operacional', color: 'green.400' },
+    { name: 'Website', status: 'Operacional', color: 'green.400' },
+  ];
+
+  const renderIssues = () => {
+    return siteStatus.issues.map((issue) => (
+      <Box key={issue.id} p={2} borderRadius="md" bg="gray.700" color={"white"} mt={3}>
+        <Text fontSize="md" fontWeight="bold" mb={1}>
+          {issue.title}
+        </Text>
+        <Badge colorScheme={issue.status === 'Resolvido' ? 'green' : 'red'}>
+          {issue.status}
+        </Badge>
+      </Box>
+    ));
+  };
   return (
     <>
       <Head>
@@ -26,41 +48,27 @@ export default function HomePage() {
           Status site do zé
         </Heading>
         <Box bg="gray.700" mb={2} p={2}>
-          <Box
-            mt={7}
-            mb={8}
-            bg="red.400"
-            p={3}
-            justifyContent={{ base: 'center', lg: 'space-between' }}
-            flexDirection={{ base: 'column', lg: 'row' }}
-            rounded="lg" display="flex"
-          >
-            <Text fontWeight={"bold"}> Alguns sistemas estão passando por uma grande interrupção</Text>
-            <Text>um minuto atrás</Text>
-          </Box>
-          <Box color="black" mt={3} bg="gray.400" p={3} rounded="lg" display="flex" justifyContent={"space-between"}>
-            <Text>API</Text>
-            <Badge bg={"blue.400"}>Problemas de desempenho</Badge>
-          </Box>
-          <Box color="black" mt={3} bg="gray.400" p={3} rounded="lg" display="flex" justifyContent={"space-between"}>
-            <Text>CDN</Text>
-            <Badge bg={"green.400"}>Operacional</Badge>
-          </Box>
-          <Box color="black" mt={3} bg="gray.400" p={3} rounded="lg" display="flex" justifyContent={"space-between"}>
-            <Text>Processador de pagamento</Text>
-            <Badge bg={"green.400"}>Operacional</Badge>
-          </Box>
-          <Box color="black" mt={3} bg="gray.400" p={3} rounded="lg" display="flex" justifyContent={"space-between"}>
-            <Text>Website</Text>
-            <Badge bg={"green.400"}>Operacional</Badge>
-          </Box>
-
+          <StatusHeading
+            message={siteStatus.message}
+            status={siteStatus.status}
+            uptime={siteStatus.uptime}
+          />
+          {services.map((service) => {
+            return (
+              <StatusService
+                color={service.color}
+                name={service.name}
+                status={service.status}
+                key={service.name}
+              />
+            )
+          })}
         </Box>
         <Box mb={3}>
           <Text>
             Ultimas alterações
           </Text>
-          <Box color="black" mt={3} bg="gray.400" p={3} borderLeftWidth="16px" borderLeftColor="purple.500" padding="7px" borderRadius="4px" >
+          <Box color="white" mt={3} bg="gray.700" p={3} borderLeftWidth="16px" borderLeftColor="purple.500" padding="7px" borderRadius="4px" >
             <Box display="flex" justifyContent={"space-between"}>
               <Text>
                 <strong>Autor: {publicRuntimeConfig.author}</strong>
@@ -73,19 +81,9 @@ export default function HomePage() {
             </Box>
           </Box>
         </Box>
-        <Text>
-          Incidentes
-        </Text>
-        <Box color="black" mt={3} bg="gray.400" p={3} borderLeftWidth="16px" borderLeftColor="purple.500" padding="7px" borderRadius="4px" >
-          <Box display="flex" justifyContent={"space-between"}>
-            <Text>
-              <strong>06 DE MAIO DE 2023, 5h36</strong>
-            </Text>
-            <Badge bg={"#2f5888"}>Fechado</Badge>
-          </Box>
-          <Box>
-            <Text>Nossos serviços podem estar temporariamente indisponíveis</Text>
-          </Box>
+        <Box w="100%">
+          <Text fontSize="lg">Problemas recentes:</Text>
+          {renderIssues()}
         </Box>
       </Container>
     </>
